@@ -1,0 +1,25 @@
+POST http://localhost:3333/videos
+Content-Type: application/json
+
+{
+    "title": "video 2",
+    "description": "esse é o video 01",
+    "duration": 200
+}
+
+
+###
+
+GET http://localhost:3333/videos
+
+
+###
+
+PUT http://localhost:3333/videos
+Content-Type: application/json
+
+{
+    "title": "video 2",
+    "description": "esse é o video 01",
+    "duration": 200
+}
