@@ -2,24 +2,27 @@ POST http://localhost:3333/videos
 Content-Type: application/json
 
 {
-    "title": "video 2",
-    "description": "esse é o video 01",
+    "title": "video python",
+    "description": "descrição python",
     "duration": 200
 }
 
 
 ###
 
-GET http://localhost:3333/videos
+GET http://localhost:3333/videos?search=python
 
 
 ###
 
-PUT http://localhost:3333/videos
+PUT http://localhost:3333/videos/0835ee36-591e-493b-a8e6-aef87c73d30b
 Content-Type: application/json
 
 {
-    "title": "video 2",
+    "title": "video 1",
     "description": "esse é o video 01",
-    "duration": 200
+    "duration": 300
 }
+
+###
+DELETE http://localhost:3333/videos/0835ee36-591e-493b-a8e6-aef87c73d30b

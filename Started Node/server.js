@@ -17,7 +17,10 @@ const database = new DatabaseMemory
 
 
 server.get('/videos', (request, response) => {
-    const videos = database.list()
+
+    const search = request.query.search
+
+    const videos = database.list(search)
 
     return videos
 })
@@ -51,8 +54,12 @@ server.put('/videos/:id', (request, response) => {
 })
 
 
-server.delete('/videos/:id', () => {
-    return "home"
+server.delete('/videos/:id', (request, response) => {
+    const id_video = request.params.id
+
+    database.delete(id_video)
+
+    return response.status(204).send()
 })
 
 server.listen({
